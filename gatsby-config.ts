@@ -1,5 +1,11 @@
 import type { GatsbyConfig } from "gatsby";
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+console.log(process.env.NODE_ENV)
+console.log(process.env.CONTENTFUL_SPACE_ID)
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Marilyn Wedding Events`,
@@ -12,10 +18,8 @@ const config: GatsbyConfig = {
   plugins: [{
     resolve: 'gatsby-source-contentful',
     options: {
-      "accessToken": "fxRdp6rQwk0hmAx4A05c8jAwlNz2sO6btrmfe2KZHKc",
-      // previewToken: _8lZJbRTfG-zGpnflTMjD7mxBZBv4OFN2UAjM2ZjNWg
-//      "accessToken": "CFPAT-OwKcmga_GwBkLN7GsiKhHJNguPDeBXe0xvEW1FcNEh4",
-      "spaceId": "aydwzzbft1ya"
+      "accessToken": process.env.CONTENTFUL_ACCESS_TOKEN,
+      "spaceId": process.env.CONTENTFUL_SPACE_ID
     }
   }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-styled-components", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
