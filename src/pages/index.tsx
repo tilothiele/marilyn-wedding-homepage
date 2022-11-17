@@ -1,11 +1,7 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
+import Layout from "../components/Layout"
 
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
 const headingStyles = {
   marginTop: 0,
   marginBottom: 64,
@@ -125,7 +121,7 @@ const links = [
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <main style={pageStyles}>
+    <Layout>
       <ul style={listStyles}>
         {links.map(link => (
           <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
@@ -146,7 +142,7 @@ const IndexPage: React.FC<PageProps> = () => {
           </li>
         ))}
       </ul>
-    </main>
+    </Layout>
   )
 }
 
