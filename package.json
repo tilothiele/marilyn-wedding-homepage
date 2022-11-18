@@ -13,15 +13,22 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "preload-fonts": "gatsby-preload-fonts"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@mdx-js/react": "^2.1.5",
+    "@mui/icons-material": "^5.10.14",
+    "@mui/material": "^5.10.14",
+    "@mui/styled-engine-sc": "^5.10.14",
     "babel-plugin-styled-components": "^2.0.7",
     "gatsby": "^5.0.0",
     "gatsby-plugin-image": "^3.0.0",
     "gatsby-plugin-manifest": "^5.0.0",
     "gatsby-plugin-mdx": "^5.0.0",
+    "gatsby-plugin-preload-fonts": "^4.0.0",
     "gatsby-plugin-sharp": "^5.0.0",
     "gatsby-plugin-sitemap": "^6.0.0",
     "gatsby-plugin-styled-components": "^6.0.0",
@@ -31,7 +38,9 @@
     "gatsby-transformer-sharp": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-components": "^5.3.6"
+    "react-material-ui-carousel": "^3.4.2",
+    "styled-components": "^5.3.6",
+    "typeface-cormorant": "^1.1.13"
   },
   "devDependencies": {
     "@types/node": "^18.11.9",

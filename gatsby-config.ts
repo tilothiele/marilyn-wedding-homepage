@@ -21,10 +21,17 @@ const config: GatsbyConfig = {
       "accessToken": process.env.CONTENTFUL_ACCESS_TOKEN,
       "spaceId": process.env.CONTENTFUL_SPACE_ID
     }
-  },     "gatsby-transformer-remark",  "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-styled-components", "gatsby-plugin-sitemap", {
+  },
+  'gatsby-plugin-preload-fonts',
+  "gatsby-transformer-remark",
+  "gatsby-plugin-image",
+  "gatsby-plugin-sharp",
+  "gatsby-transformer-sharp",
+  "gatsby-plugin-styled-components",
+  "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "src/images/icon.png"
+      "icon": "src/images/logos/marilyn-logo-white.png"
     }
   }, "gatsby-plugin-mdx",   {
     resolve: `gatsby-source-filesystem`,
