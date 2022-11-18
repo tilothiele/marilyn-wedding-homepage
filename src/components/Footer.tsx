@@ -3,6 +3,8 @@ import React from 'react'
 
 const grey_color = '#dadada'
 
+//  footer: schwarzes Logo, impressum, datenschutzerklärung
+
 const menuItems = [
     { name: "Impressum", url: '/' },
     { name: "Datenschutzerklärung", url: '/dsgvo' },
