@@ -1,4 +1,4 @@
-import { Container, Grid, Paper, Card, CardContent, Typography } from '@mui/material'
+import { Container, Grid, Paper, Card, CardContent, Typography, CardActions, Link } from '@mui/material'
 import React from 'react'
 import {CalendarMonth, Diversity3, ContactSupport} from '@mui/icons-material';
 
@@ -31,6 +31,11 @@ export default function Services() {
                 <Typography variant="h5">{s.titel}</Typography>
                 <Typography variant="body2">{s.description}</Typography>
               </CardContent>
+              <CardActions>
+                <Link href="/service"  underline='none' color='inherit'>
+                  <Typography>Mehr dazu...</Typography>
+                </Link>
+              </CardActions>
             </Card>
           </Grid>
         ))}

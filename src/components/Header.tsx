@@ -1,5 +1,4 @@
-import { Avatar, Box, Container, Grid, IconButton, Menu, MenuItem, Tooltip, Typography } from '@mui/material'
-import { Link } from 'gatsby';
+import { Avatar, Box, Container, Grid, IconButton, Link, Menu, MenuItem, Tooltip, Typography } from '@mui/material'
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react'
 
@@ -9,29 +8,34 @@ const petite_orchid_color = "#DD9D9D";
 
 const menuItems = [
     { name: "Home", url: '/' },
-    { name: "Impressionen", url: '#impressionen' },
-    { name: "Blog", url: '/blog' },
-    { name: "Service", url: '#service' },
+    { name: "Impressionen", url: '/#impressionen' },
+    { name: "Service", url: '/#service' },
     { name: "Über uns", url: '/about' },
     { name: "Kontakt", url: '/contact' },
 ]
 
-const linkStyle = {
-    color: 'inherit',
-    textDecoration: 'inherit'
-}
 
 export default function Header() {
 
   return (
-        <Grid container direction="column" flexDirection='row' style={{backgroundColor: petite_orchid_color}}>
+        <Grid container direction="column" flexDirection='row' style={{backgroundColor: petite_orchid_color}} pl={10}>
             <Grid item ml={10} style={{marginRight: 'auto'}}>
-                <Link to='/'>
+                <Link href='/'>
                 <StaticImage src="../images/logos/marilyn-logo-pink.png" alt="marilyn-logo" height={100}/>
                 </Link>
             </Grid>
 
-            {menuItems.map(m => <Grid item sx={{marginTop: 'auto', marginBottom: 'auto'}}><MenuItem key={m.url}><Link to={m.url} style={linkStyle}><Typography sx={{textTransform: 'uppercase'}}>{m.name}</Typography></Link></MenuItem></Grid>)}
+            {menuItems.map(m => (
+                    <MenuItem key={m.url}>
+                        <Link href={m.url} underline='none' color='inherit'>
+                            <Typography sx={{textTransform: 'uppercase'}}>{m.name}</Typography>
+                        </Link>
+                    </MenuItem>
+            ))}
+
+            <Grid item ml={10} style={{marginLeft: 'auto'}}>
+
+            </Grid>
 
         </Grid>
 )

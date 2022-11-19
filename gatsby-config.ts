@@ -23,23 +23,33 @@ const config: GatsbyConfig = {
     }
   },
   'gatsby-plugin-preload-fonts',
-  "gatsby-transformer-remark",
   "gatsby-plugin-image",
   "gatsby-plugin-sharp",
   "gatsby-transformer-sharp",
   "gatsby-plugin-styled-components",
-  "gatsby-plugin-sitemap", {
+  "gatsby-plugin-sitemap",
+  {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/logos/marilyn-logo-white.png"
     }
-  }, "gatsby-plugin-mdx",   {
+  },
+  {
+    resolve: `gatsby-plugin-mdx`,
+    options: {
+      extensions: [`.md`, `.mdx`],
+      gatsbyRemarkPlugins: [],
+    },
+  },
+    {
     resolve: `gatsby-source-filesystem`,
     options: {
       name: `markdown-pages`,
       path: `${__dirname}/src/markdown-pages`,
     },
-  }, {
+    __key: "mdx"
+  },
+  {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
