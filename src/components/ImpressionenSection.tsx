@@ -6,16 +6,16 @@ import Carousel from 'react-material-ui-carousel'
 
 export default function ImpressionenSection() {
   return (
-    <Container maxWidth="lg" id='impressionen'>
-        <Grid container>
-            <Grid item ml='auto' mr='auto'>
-                <Carousel>
-                    <StaticImage src='../images/impressions/istock-church.jpg' alt='curch'></StaticImage>
-                    <StaticImage src='../images/impressions/istock-beach.jpg' alt='beach'></StaticImage>
-                    <StaticImage src='../images/impressions/istock-ringe.jpg' alt='ringe'></StaticImage>
-                </Carousel>
-        </Grid>
-        </Grid>
-    </Container>
-)
+            <Grid container>
+                <Grid item ml='auto' mr='auto'>
+                    <Carousel height={300}>
+                        <StaticImage src='https://picsum.photos/400/600' alt='curch' height={300}></StaticImage>
+                        <StaticImage src='https://picsum.photos/400/601' alt='beach' height={300}></StaticImage>
+                        <StaticImage src='https://picsum.photos/400/602' alt='ringe' height={300}></StaticImage>
+                        <StaticImage src='https://picsum.photos/400/603' alt='alt4' height={300}></StaticImage>
+                        <StaticImage src='https://picsum.photos/400/604' alt='alt5' height={300}></StaticImage>
+                    </Carousel>
+                </Grid>
+            </Grid>
+    )
 }

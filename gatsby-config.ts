@@ -9,6 +9,8 @@ console.log(process.env.CONTENTFUL_SPACE_ID)
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Marilyn Wedding Events`,
+    description: 'Die Adresse für Ihre Hochzeitsplanung und -durchführung',
+    image: './images/logos/marilyn-logo-pink.png',
     siteUrl: `https://marilyn-wedding-events.com`
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
