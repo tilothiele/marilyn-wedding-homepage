@@ -26,7 +26,9 @@ const theme = createTheme({
     mode: 'light'
   },
   typography: {
+    fontSize: 18,
     fontFamily: [
+//      "'Auto Signature'",
       'Cormorant',
       'serif',
     ].join(',')

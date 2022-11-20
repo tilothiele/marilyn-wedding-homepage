@@ -1,3 +1,11 @@
 /*
 @import url('../../static/fonts/CormorantGaramond-Bold.ttf');
 */
+
+@font-face {
+    font-family: 'Auto Signature';
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+    src: url(/fonts/aAutoSignature.woff2) format("woff2");
+}

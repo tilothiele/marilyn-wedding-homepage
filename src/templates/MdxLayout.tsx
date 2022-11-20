@@ -4,6 +4,8 @@ import { MDXProvider } from "@mdx-js/react"
 import { Link } from "gatsby"
 import Layout from "../layouts/DefaultLayout"
 import { Container } from "@mui/material"
+import type { HeadProps } from "gatsby"
+import { SEO } from '../components/SEO';
 
 const shortcodes = { Link } // Provide common components here
 
@@ -29,12 +31,16 @@ export const query = graphql`
   }
 `
 
-import type { HeadProps } from "gatsby"
-import { SEO } from '../components/SEO';
+type MdxStruct = {
+    mdx: {
+      frontmatter: {
+        title: string
+      }
+    }
+}
 
-export function Head(props: HeadProps) {
-  const data = JSON.stringify(props)
+export function Head({ data }: HeadProps<MdxStruct>) {
   return (
-    <SEO title={props.data.mdx.frontmatter.title}/>
+    <SEO title={data.mdx.frontmatter.title}/>
   )
 }
