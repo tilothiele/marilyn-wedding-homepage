@@ -13,7 +13,7 @@ const StyledGridSection = styled(Grid)({
 })
 export default function IchBinSection() {
   return (
-        <StyledGridSection container>
+        <StyledGridSection container mt={8}>
             <Grid item mx={5} mt={-5} mb={5} columns={4}>
                 <StaticImage alt='Spielende Kinder auf der Hochzeitsfeier' src='../images/startseite/spielende-kinder.jpg' width={500}/>
                 </Grid>
@@ -29,7 +29,7 @@ export default function IchBinSection() {
                     Kontakt
                 </Button>
             </Grid>
-            <Grid item columns={4} mt={5}>
+            <Grid item columns={4} mt={5} ml={5}>
                 <StaticImage alt='Jessika Thiele' src='../images/portrait-jessika/jessika-thiele-weisse-bluse.jpg' width={450}/>
             </Grid>
         </StyledGridSection>
