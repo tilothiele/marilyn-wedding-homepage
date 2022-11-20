@@ -16,7 +16,7 @@ export function Head(props: HeadProps) {
 
 export default function Index() {
   return (
-    <Layout pageTitle="..">
+    <Layout pageTitle="Home">
       <HeroSection/>
       <ServicesSection/>
       <IchBinSection/>
