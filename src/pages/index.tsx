@@ -3,10 +3,10 @@ import "typeface-cormorant";
 
 import HeroSection from '../components/HeroSection';
 import ServicesSection from '../components/ServicesSection';
-import ImpressionenSection from '../components/ImpressionenSection';
 import Layout from '../layouts/DefaultLayout';
 import type { HeadProps } from "gatsby"
 import { SEO } from '../components/SEO';
+import IchBinSection from '../components/IchBinSection';
 
 export function Head(props: HeadProps) {
   return (
@@ -19,7 +19,7 @@ export default function Index() {
     <Layout pageTitle="..">
       <HeroSection/>
       <ServicesSection/>
-      <ImpressionenSection/>
+      <IchBinSection/>
     </Layout>
   )
 }

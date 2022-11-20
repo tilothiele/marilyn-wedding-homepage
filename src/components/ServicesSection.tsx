@@ -24,7 +24,7 @@ export default function Services() {
     <Container maxWidth="lg" id="service">
       <Grid container justifyContent="center" spacing={3} mt={4} mb={4}>
         {services.map(s => (
-          <Grid item md={4}>
+          <Grid item md={4} key={s.titel}>
             <Card>
               <CardContent  style={{textAlign: 'center'}} >
                 {s.logo}
