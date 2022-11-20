@@ -28,3 +28,13 @@ export const query = graphql`
     }
   }
 `
+
+import type { HeadProps } from "gatsby"
+import { SEO } from '../components/SEO';
+
+export function Head(props: HeadProps) {
+  const data = JSON.stringify(props)
+  return (
+    <SEO title={props.data.mdx.frontmatter.title}/>
+  )
+}

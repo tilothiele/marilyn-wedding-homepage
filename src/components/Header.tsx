@@ -1,4 +1,4 @@
-import { Avatar, Box, Container, Grid, IconButton, Link, Menu, MenuItem, Tooltip, Typography } from '@mui/material'
+import { Grid, Link, MenuItem, Typography } from '@mui/material'
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react'
 
@@ -10,13 +10,13 @@ const menuItems = [
     { name: "Home", url: '/' },
     { name: "Impressionen", url: '/#impressionen' },
     { name: "Service", url: '/#service' },
-    { name: "Über uns", url: '/about' },
+    { name: "Über mich", url: '/about' },
     { name: "Kontakt", url: '/contact' },
 ]
 
 
 export default function Header() {
-
+//    const theme = useTheme();
   return (
         <Grid container direction="column" flexDirection='row' style={{backgroundColor: petite_orchid_color}} pl={10}>
             <Grid item ml={10} style={{marginRight: 'auto'}}>
