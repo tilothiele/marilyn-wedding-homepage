@@ -1,8 +1,7 @@
-import { Box, Button, Grid, styled, Typography } from '@mui/material'
+import { Box, Button, Grid, Link, styled, Typography } from '@mui/material'
 import { fontSize } from '@mui/system'
 import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
-import { Link } from 'react-router-dom';
 
 const StyledSignature = styled(Typography)({
      fontFamily: "'Auto Signature'",
@@ -26,7 +25,7 @@ export default function IchBinSection() {
                     Ich bin Gründerin von Marilyn Wedding Events und mache
                     Eure Hochzeit zu einem unvergesslichen und einzigartigen Erlebnis für alle Beteiligten.
                 </Typography>
-                <Button component={Link} to="/contact" variant='outlined' sx={{color: 'white', borderColor: 'white', margin: 5}}>
+                <Button component={Link} href="/contact" variant='outlined' sx={{color: 'white', borderColor: 'white', margin: 5}}>
                     Kontakt
                 </Button>
             </Grid>
