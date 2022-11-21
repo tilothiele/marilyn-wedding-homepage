@@ -13,6 +13,7 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { ReactJSXElement } from '@emotion/react/types/jsx-namespace';
+import TextField from '@mui/material/TextField';
 
 export function Head(props: HeadProps) {
   return (
@@ -59,11 +60,11 @@ export default function Index() {
             </Grid>
         </Grid>
         <Grid container mb={10}>
-            <Grid item mt={5} ml={-10}>
+            <Grid item mt={5} ml={-10} md={4}>
                 <StaticImage alt="Jessika Thiele" src="../images/portrait-jessika/jessika-thiele-weisse-bluse.jpg" width={500}/>
                 <Typography variant="h4" mt={3}>Kaffe? Mail? Anruf?</Typography>
                 {kontakte.map(k => (
-                    <Grid container mt={5}>
+                    <Grid container mt={5} key={k.title}>
                         <Grid item mt={2}  ml={2} mr={2}>
                             <Box my='auto'>{k.icon}</Box>
                         </Grid>
@@ -74,12 +75,12 @@ export default function Index() {
                     </Grid>
                 ))}
             </Grid>
-            <Grid item ml={15} mt={5}>
+            <Grid item ml={15} mt={5} md={6}>
                 <Typography variant="h5" mb={3}>Kontaktformular</Typography>
-                <Typography>Name (Eingabefeld kommt noch)</Typography>
-                <Typography>Email (Eingabefeld kommt noch)</Typography>
-                <Typography>Eventdatum (Eingabefeld kommt noch)</Typography>
-                <Typography>Anfragetext (Eingabefeld kommt noch)</Typography>
+                <TextField id="standard-basic" label="Name" variant="standard" required fullWidth/>
+                <TextField id="standard-basic" label="Email" variant="standard" required fullWidth/>
+                <TextField id="standard-basic" label="Eventdatum" variant="standard" fullWidth/>
+                <TextField id="standard-basic" label="Anfragetext" variant="standard" rows={4} multiline required fullWidth/>
                 <Button variant='outlined' sx={{color: 'grey', borderColor: 'grey', margin: 5}}>Senden</Button>
             </Grid>
         </Grid>
