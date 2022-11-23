@@ -1,12 +1,15 @@
 import { Grid, Link, MenuItem, Typography } from '@mui/material'
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react'
+import useMediaQuery from '@mui/material/useMediaQuery';
+
+import { DesktopMenu, MobileMenu, MenuItemType } from './Menu'
 
 const petite_orchid_color = "#DD9D9D";
 
 // Menü: Home Impressionen Blog Service Über uns Kontakt
 
-const menuItems = [
+const menuItems: MenuItemType[] = [
     { name: "Home", url: '/' },
     { name: "Impressionen", url: '/#impressionen' },
     { name: "Service", url: '/#service' },
@@ -16,7 +19,11 @@ const menuItems = [
 
 
 export default function Header() {
-//    const theme = useTheme();
+
+  const matches = useMediaQuery('(min-width:900px)');
+
+
+  //    const theme = useTheme();
   return (
         <Grid container direction="column" flexDirection='row' style={{backgroundColor: petite_orchid_color}} pl={10}>
             <Grid item ml={10} style={{marginRight: 'auto'}}>
@@ -25,15 +32,12 @@ export default function Header() {
                 </Link>
             </Grid>
 
-            {menuItems.map(m => (
-                    <MenuItem key={m.url}>
-                        <Link href={m.url} underline='none' color='inherit'>
-                            <Typography sx={{textTransform: 'uppercase'}}>{m.name}</Typography>
-                        </Link>
-                    </MenuItem>
-            ))}
+            {matches ? <DesktopMenu menuItems={menuItems}/> : null}
 
             <Grid item ml={10} style={{marginLeft: 'auto'}}>
+
+
+            {!matches ? <MobileMenu menuItems={menuItems}/> : null}
 
             </Grid>
 
