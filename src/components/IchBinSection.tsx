@@ -1,5 +1,4 @@
-import { Box, Button, Grid, Link, styled, Typography } from '@mui/material'
-import { fontSize } from '@mui/system'
+import { Button, Grid, Link, styled, Typography, useMediaQuery } from '@mui/material'
 import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
 
@@ -12,12 +11,14 @@ const StyledGridSection = styled(Grid)({
     backgroundColor: 'gray'
 })
 export default function IchBinSection() {
+    const matches = useMediaQuery('(min-width:1570px)');
+
   return (
         <StyledGridSection container mt={8}>
-            <Grid item mx={5} mt={-5} mb={5} columns={4}>
+            {matches && <Grid item ml={5} mt={-5} mb={5} columns={4}>
                 <StaticImage alt='Spielende Kinder auf der Hochzeitsfeier' src='../images/startseite/spielende-kinder.jpg' width={500}/>
-                </Grid>
-            <Grid item columns={3} maxWidth={500} mt={5}>
+            </Grid>}
+            <Grid item columns={3} ml={5} maxWidth={500} mt={5}>
                 <StyledSignature>
                     Mein Name ist Jessika Thiele.
                 </StyledSignature>
