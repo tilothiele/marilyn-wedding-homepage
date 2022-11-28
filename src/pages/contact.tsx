@@ -1,12 +1,9 @@
 import React from 'react'
 import "typeface-cormorant";
 
-import HeroSection from '../components/HeroSection';
-import ServicesSection from '../components/ServicesSection';
 import Layout from '../layouts/DefaultLayout';
 import type { HeadProps } from "gatsby"
 import { SEO } from '../components/SEO';
-import IchBinSection from '../components/IchBinSection';
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import { StaticImage } from 'gatsby-plugin-image';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';

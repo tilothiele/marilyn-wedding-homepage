@@ -12,6 +12,7 @@ const petite_orchid_color = "#DD9D9D";
 const menuItems: MenuItemType[] = [
     { name: "Home", url: '/' },
     { name: "Service", url: '/#service' },
+    { name: "Impressionen", url: '/impressionen' },
     { name: "Über mich", url: '/about' },
     { name: "Kontakt", url: '/contact' },
 ]
