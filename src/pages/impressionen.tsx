@@ -43,10 +43,6 @@ export default function Index() {
 
     const num_cols = three_col ? 3 : two_col ? 2 : 1;
 
-    console.log('two col', two_col)
-    console.log('three col', three_col)
-    console.log('num_cols', num_cols)
-
     return (
         <Layout pageTitle="Impressionen">
             <Container>
