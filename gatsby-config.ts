@@ -24,6 +24,17 @@ const config: GatsbyConfig = {
       "spaceId": process.env.CONTENTFUL_SPACE_ID
     }
   },
+  {
+    resolve: `gatsby-plugin-gatsby-cloud`,
+    options: {
+      headers: {
+        "/*.js": [
+          "Cache-Control: public, max-age=0, must-revalidate",
+          "Content-Type: text/javascript"
+        ],
+      },
+    },
+  },
   'gatsby-plugin-preload-fonts',
   "gatsby-plugin-image",
   "gatsby-plugin-sharp",
