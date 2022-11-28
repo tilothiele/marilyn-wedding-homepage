@@ -3,7 +3,7 @@ import React from 'react'
 import Layout from '../layouts/DefaultLayout';
 import type { HeadProps } from "gatsby"
 import { SEO } from '../components/SEO';
-import { Container, Paper } from '@mui/material';
+import { Container, Paper, useMediaQuery } from '@mui/material';
 import Masonry from '@mui/lab/Masonry';
 import { styled } from '@mui/material/styles';
 
@@ -38,10 +38,19 @@ export function Head(props: HeadProps) {
 
 export default function Index() {
     const prefix = '/masonry/'
+    const two_col = useMediaQuery('(min-width:600px)');
+    const three_col = useMediaQuery('(min-width:1200px)')
+
+    const num_cols = three_col ? 3 : two_col ? 2 : 1;
+
+    console.log('two col', two_col)
+    console.log('three col', three_col)
+    console.log('num_cols', num_cols)
+
     return (
         <Layout pageTitle="Impressionen">
             <Container>
-                <Masonry columns={3} spacing={2} sx={{mt: 2}}>
+                <Masonry columns={num_cols} spacing={2} sx={{mt: 2}}>
                     {images.map((item, index) => (
                     <div key={index}>
                         <img
