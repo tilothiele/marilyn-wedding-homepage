@@ -24,7 +24,8 @@ const StyledContentGrid = styled(Grid, {
     position: "relative"
 })
 
-const beauty_bush_color = '#F1C0B9'
+//const beauty_bush_color = '#F1C0B9'
+const beauty_bush_color = 'white'
 
 
 export default function HeroSection() {
