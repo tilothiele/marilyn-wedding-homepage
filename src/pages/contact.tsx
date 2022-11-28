@@ -1,5 +1,4 @@
 import React from 'react'
-import "typeface-cormorant";
 
 import Layout from '../layouts/DefaultLayout';
 import type { HeadProps } from "gatsby"
