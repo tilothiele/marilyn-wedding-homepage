@@ -3,9 +3,36 @@
 */
 
 @font-face {
+    font-family: 'Cormorant Garamond';
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+    src: url(/fonts/CormorantGaramond-Regular.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond Bold';
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+    font-weight: bold;
+    src: url(/fonts/CormorantGaramond-Bold.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond Italic';
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+    font-weight: italic;
+    src: url(/fonts/CormorantGaramond-Italic.woff2) format("woff2");
+}
+
+@font-face {
     font-family: 'Auto Signature';
     font-weight: 300;
     font-display: swap;
     font-style: normal;
     src: url(/fonts/aAutoSignature.woff2) format("woff2");
 }
+

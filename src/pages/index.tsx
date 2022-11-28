@@ -1,5 +1,4 @@
 import React from 'react'
-import "typeface-cormorant";
 
 import HeroSection from '../components/HeroSection';
 import ServicesSection from '../components/ServicesSection';

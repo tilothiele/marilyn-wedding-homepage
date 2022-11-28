@@ -5,6 +5,7 @@ import { ThemeProvider } from '@emotion/react';
 import { Container, CssBaseline } from '@mui/material';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { fontStyle } from '@mui/system';
 
 type ReactNode =
   | ReactChild
@@ -28,8 +29,7 @@ const theme = createTheme({
   typography: {
     fontSize: 18,
     fontFamily: [
-//      "'Auto Signature'",
-      'Cormorant',
+      'Cormorant Garamond',
       'serif',
     ].join(',')
   }
