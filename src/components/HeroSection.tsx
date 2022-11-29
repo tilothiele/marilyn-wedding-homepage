@@ -24,8 +24,8 @@ const StyledContentGrid = styled(Grid, {
     position: "relative"
 })
 
-//const beauty_bush_color = '#F1C0B9'
-const beauty_bush_color = 'white'
+const beauty_bush_color = '#F1C0B9'
+//const beauty_bush_color = 'white'
 
 
 export default function HeroSection() {
@@ -40,22 +40,20 @@ export default function HeroSection() {
             zIndex: 1 }}
         />
         <StyledOverlay/>
-        <Container maxWidth="md" sx={{height: "80vh"}}>
+        <Container sx={{height: "80vh"}} maxWidth={true} >
             <Grid
                 container
-                justifyContent="space-between"
-                alignItems="center"
                 sx={{   height: "80vh",
                 zIndex: 100,
                 position: "relative"
             }}
             >
-                <Grid item sm={10}>
-                   <Typography variant='h2' component="h1" style={{color: beauty_bush_color, fontWeight: 500}}>
+                <Grid item sm={10} mt='auto' mr='auto' mb={5} ml={5}>
+                   <Typography variant='h1' component="h1" style={{color: beauty_bush_color}}>
                         Marilyn Wedding Events
                     </Typography>
-                    <Typography variant='h4' style={{color: beauty_bush_color}}>
-                        Exlusive Hochzeitsplanung in Hamburg Deutschland und in der Welt
+                    <Typography variant='h3' style={{color: beauty_bush_color}}>
+                        Exlusive Hochzeitsplanung in Hamburg, Deutschland und in der Welt
                     </Typography>
                 </Grid>
             </Grid>
