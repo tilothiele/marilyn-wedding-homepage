@@ -20,7 +20,7 @@ export default function IchBinSection() {
             </Grid>}
             <Grid item columns={3} ml={5} maxWidth={500} mt={5} sx={{alignItems: 'center'}}>
                 <StyledSignature>
-                    Hallo mein Name ist Hessika.
+                    Hallo mein Name ist Jessika.
                 </StyledSignature>
                 <Typography flexWrap='wrap'>
                     Ich bin Gründerin von Marilyn Wedding Events und mache
