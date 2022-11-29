@@ -10,6 +10,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { ReactJSXElement } from '@emotion/react/types/jsx-namespace';
 import TextField from '@mui/material/TextField';
+import { useForm } from '@formspree/react';
 
 export function Head(props: HeadProps) {
   return (
@@ -40,6 +41,24 @@ const kontakte: ContactType[] = [
         detail: '@marilynwedding'
     },
 ]
+
+const FORM_SPREE_FORM_ID = 'xyyvqzzp';
+
+function ContactForm() {
+    const [state, handleSubmit] = useForm(FORM_SPREE_FORM_ID);
+    if (state.succeeded) {
+      return <div>Vielen Dank für Ihre Kontaktanfrage! Ich werde mich schnellstmöglich mit Ihnen in Verbindung setzen. Das kann 1-2 Tage dauern.</div>;
+    }
+    return (
+      <form onSubmit={handleSubmit}>
+        <TextField id="standard-basic" label="Name" name='Name' variant="standard" required fullWidth/>
+        <TextField id="standard-basic" label="Email" name='Email' variant="standard" required fullWidth/>
+        <TextField id="standard-basic" label="Eventdatum" name='EventDatum' variant="standard" fullWidth/>
+        <TextField id="standard-basic" label="Anfragetext" name='Anfragetext' variant="standard" rows={4} multiline required fullWidth/>
+        <Button variant='outlined' type='submit' sx={{color: 'grey', borderColor: 'grey', margin: 5}}>Senden</Button>
+      </form>
+    )
+}
 
 export default function Index() {
     const matches = useMediaQuery('(min-width:1000px)');
@@ -74,11 +93,7 @@ export default function Index() {
             </Grid>
             <Grid item ml={15} mt={5} md={6}>
                 <Typography variant="h5" mb={3}>Kontaktformular</Typography>
-                <TextField id="standard-basic" label="Name" variant="standard" required fullWidth/>
-                <TextField id="standard-basic" label="Email" variant="standard" required fullWidth/>
-                <TextField id="standard-basic" label="Eventdatum" variant="standard" fullWidth/>
-                <TextField id="standard-basic" label="Anfragetext" variant="standard" rows={4} multiline required fullWidth/>
-                <Button variant='outlined' sx={{color: 'grey', borderColor: 'grey', margin: 5}}>Senden</Button>
+                <ContactForm/>
             </Grid>
         </Grid>
       </Container>
