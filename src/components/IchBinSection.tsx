@@ -13,14 +13,14 @@ const StyledGridSection = styled(Grid)({
 export default function IchBinSection() {
     const matches = useMediaQuery('(min-width:1570px)');
 
-  return (
+    return (
         <StyledGridSection container mt={8}>
             {matches && <Grid item ml={5} mt={-5} mb={5} columns={4}>
                 <StaticImage alt='Spielende Kinder auf der Hochzeitsfeier' src='../images/startseite/spielende-kinder.jpg' width={500}/>
             </Grid>}
-            <Grid item columns={3} ml={5} maxWidth={500} mt={5}>
+            <Grid item columns={3} ml={5} maxWidth={500} mt={5} sx={{alignItems: 'center'}}>
                 <StyledSignature>
-                    Mein Name ist Jessika Thiele.
+                    Hallo mein Name ist Hessika.
                 </StyledSignature>
                 <Typography flexWrap='wrap'>
                     Ich bin Gründerin von Marilyn Wedding Events und mache

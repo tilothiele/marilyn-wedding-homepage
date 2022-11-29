@@ -3,7 +3,7 @@ import React from 'react'
 import Layout from '../layouts/DefaultLayout';
 import type { HeadProps } from "gatsby"
 import { SEO } from '../components/SEO';
-import { Box, Button, Container, Grid, Typography } from '@mui/material';
+import { Box, Button, Container, Grid, Typography, useMediaQuery } from '@mui/material';
 import { StaticImage } from 'gatsby-plugin-image';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
@@ -42,6 +42,7 @@ const kontakte: ContactType[] = [
 ]
 
 export default function Index() {
+    const matches = useMediaQuery('(min-width:1000px)');
   return (
     <Layout pageTitle="Kontakt">
       <Container>
