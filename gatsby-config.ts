@@ -32,9 +32,9 @@ const config: GatsbyConfig = {
           "Cache-Control: public, max-age=0, must-revalidate",
           "Content-Type: text/javascript"
         ],
-        "/*": [
-          "Basic-Auth: jessika:losgehts",
-        ],
+//        "/*": [
+//          "Basic-Auth: jessika:losgehts",
+//        ],
         },
     },
   },
@@ -43,7 +43,12 @@ const config: GatsbyConfig = {
   "gatsby-plugin-sharp",
   "gatsby-transformer-sharp",
   "gatsby-plugin-styled-components",
-  "gatsby-plugin-sitemap",
+  {
+    resolve: 'gatsby-plugin-sitemap',
+    options: {
+      excludes: [ "/contact/", "/impressum/", "/dsgvo/"]
+    }
+  },
   {
     resolve: 'gatsby-plugin-manifest',
     options: {
