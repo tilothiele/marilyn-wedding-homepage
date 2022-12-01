@@ -1,6 +1,7 @@
 import { Button, Grid, Link, styled, Typography, useMediaQuery } from '@mui/material'
 import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
+import KontaktMoeglichkeiten from './Kontaktmoeglichkeiten'
 
 const StyledSignature = styled(Typography)({
      fontFamily: "'Auto Signature'",
@@ -26,8 +27,9 @@ export default function IchBinSection() {
                     Ich bin Gründerin von Marilyn Wedding Events und mache
                     Eure Hochzeit zu einem unvergesslichen und einzigartigen Erlebnis für alle Beteiligten.
                 </Typography>
+                <KontaktMoeglichkeiten/>
                 <Button component={Link} href="/contact" variant='outlined' sx={{color: 'white', borderColor: 'white', margin: 5}}>
-                    Kontakt
+                    Kontaktformular
                 </Button>
             </Grid>
             <Grid item columns={4} mt={5} ml={5}>

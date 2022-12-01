@@ -3,14 +3,11 @@ import React from 'react'
 import Layout from '../layouts/DefaultLayout';
 import type { HeadProps } from "gatsby"
 import { SEO } from '../components/SEO';
-import { Box, Button, Container, Grid, Typography, useMediaQuery } from '@mui/material';
+import { Button, Container, Grid, Typography, useMediaQuery } from '@mui/material';
 import { StaticImage } from 'gatsby-plugin-image';
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
-import EmailIcon from '@mui/icons-material/Email';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import { ReactJSXElement } from '@emotion/react/types/jsx-namespace';
 import TextField from '@mui/material/TextField';
 import { useForm } from '@formspree/react';
+import KontaktMoeglichkeiten from '../components/Kontaktmoeglichkeiten';
 
 export function Head(props: HeadProps) {
   return (
@@ -18,29 +15,6 @@ export function Head(props: HeadProps) {
   )
 }
 
-type ContactType = {
-    icon: ReactJSXElement,
-    title: string,
-    detail: string
-}
-
-const kontakte: ContactType[] = [
-    {
-        icon: (<LocalPhoneIcon/>),
-        title: 'Telefon:',
-        detail: '0176 55046878'
-    },
-    {
-        icon: (<EmailIcon/>),
-        title: 'EMail:',
-        detail: 'info@marilyn-wedding-events.com'
-    },
-    {
-        icon: (<InstagramIcon/>),
-        title: 'Instagram:',
-        detail: '@marilynwedding'
-    },
-]
 
 const FORM_SPREE_FORM_ID = 'xyyvqzzp';
 
@@ -60,6 +34,7 @@ function ContactForm() {
     )
 }
 
+
 export default function Index() {
     const matches = useMediaQuery('(min-width:1000px)');
   return (
@@ -76,22 +51,12 @@ export default function Index() {
             </Grid>
         </Grid>
         <Grid container mb={10}>
-            <Grid item mt={5} ml={-10} md={4}>
+            <Grid item mt={5} ml={0} md={5}>
                 <StaticImage alt="Jessika Thiele" src="../images/portrait-jessika/jessika-thiele-weisse-bluse.jpg" width={500}/>
-                <Typography variant="h4" mt={3}>Kaffe? Mail? Anruf?</Typography>
-                {kontakte.map(k => (
-                    <Grid container mt={5} key={k.title}>
-                        <Grid item mt={2}  ml={2} mr={2}>
-                            <Box my='auto'>{k.icon}</Box>
-                        </Grid>
-                        <Grid item>
-                            <Typography variant="h5">{k.title}</Typography>
-                            <Typography>{k.detail}</Typography>
-                        </Grid>
-                    </Grid>
-                ))}
+                <Typography variant="h4" mt={3}>Anruf? Coffee? WhatsApp?</Typography>
+                <KontaktMoeglichkeiten/>
             </Grid>
-            <Grid item ml={15} mt={5} md={6}>
+            <Grid item ml={5} mt={5} md={5}>
                 <Typography variant="h5" mb={3}>Kontaktformular</Typography>
                 <ContactForm/>
             </Grid>

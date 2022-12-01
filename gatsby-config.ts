@@ -32,7 +32,10 @@ const config: GatsbyConfig = {
           "Cache-Control: public, max-age=0, must-revalidate",
           "Content-Type: text/javascript"
         ],
-      },
+        "/*": [
+          "Basic-Auth: jessika:losgehts",
+        ],
+        },
     },
   },
   'gatsby-plugin-preload-fonts',
