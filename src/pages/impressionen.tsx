@@ -18,8 +18,10 @@ const Label = styled(Paper)(({ theme }) => ({
 }));
 
 const images = [
-    'photo_2022-11-29_10-51-17.jpg', 'photo_2022-11-29_10-51-40.jpg', 'photo_2022-11-29_10-51-50.jpg', 'photo_2022-11-29_10-52-00.jpg', 'photo_2022-11-29_10-52-14.jpg',
-    'photo_2022-11-29_10-51-36.jpg', 'photo_2022-11-29_10-51-46.jpg', 'photo_2022-11-29_10-51-54.jpg', 'photo_2022-11-29_10-52-09.jpg', 'photo_2022-11-29_10-52-18.jpg'
+    'photo_2022-11-29_10-51-17.jpg', 'photo_2022-11-29_10-51-40.jpg',
+    'photo_2022-11-29_10-51-50.jpg', 'photo_2022-11-29_10-52-00.jpg',
+    'photo_2022-11-29_10-52-14.jpg', 'photo_2022-11-29_10-51-36.jpg',
+    'photo_2022-11-29_10-51-54.jpg', 'photo_2022-11-29_10-52-18.jpg'
 ]
 
 export function Head(props: HeadProps) {
