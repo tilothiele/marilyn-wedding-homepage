@@ -51,9 +51,9 @@ export default function HeroSection() {
         <Carousel height="90vh" sx={{ position: "absolute",height: "90vh",
             width: "100%",
             zIndex: 1 }}>
-            <StaticImage src="../images/hero/wedding-menue.jpg" alt="Marilyn Wedding Events - Hochzeitsmenü" height={1500} layout='fullWidth'></StaticImage>
-            <StaticImage src="../images/hero/photo_2022-11-29_10-51-46.jpg" alt="Marilyn Wedding Events - Brautstrauß" height={1500} layout='fullWidth'></StaticImage>
-            <StaticImage src="../images/hero/photo_2022-11-29_10-52-09.jpg" alt="Marilyn Wedding Events - Hochzeitsreise" height={1500} layout='fullWidth'></StaticImage>
+            <StaticImage src="../images/hero/wedding-menue.jpg" alt="Marilyn Wedding Events - Hochzeitsmenü" layout='fullWidth'></StaticImage>
+            <StaticImage src="../images/hero/photo_2022-11-29_10-51-46.jpg" alt="Marilyn Wedding Events - Brautstrauß" layout='fullWidth'></StaticImage>
+            <StaticImage src="../images/hero/photo_2022-11-29_10-52-09.jpg" alt="Marilyn Wedding Events - Hochzeitsreise" layout='fullWidth'></StaticImage>
         </Carousel>
         <StyledOverlay/>
         <Container sx={{height: "90vh"}} maxWidth={true}>
